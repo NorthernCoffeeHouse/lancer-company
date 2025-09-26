@@ -1,60 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Games Hub</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f5ecd7;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 500px;
-            margin: 60px auto;
-            background: #fff;
-            border-radius: 18px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-            padding: 32px 24px;
-            text-align: center;
-        }
-        h1 {
-            color: #4a3f2c;
-            margin-bottom: 32px;
-        }
-        .game-list {
-            list-style: none;
-            padding: 0;
-        }
-        .game-list li {
-            margin-bottom: 20px;
-        }
-        .game-link {
-            display: inline-block;
-            background: #e2d3b3;
-            color: #333;
-            text-decoration: none;
-            padding: 14px 32px;
-            border-radius: 10px;
-            font-size: 1.1rem;
-            font-weight: 500;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-            transition: background 0.2s;
-        }
-        .game-link:hover {
-            background: #c8b89a;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Games Hub</title>
+  <style>
+    /* === Global Styles === */
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Raleway', 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #c8b89a 0%, #d4c4a8 100%);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* === Main Container === */
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 24px;
+      padding: 40px 30px;
+      width: 90%;
+      max-width: 500px;
+      margin: 80px auto 100px auto;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    /* === Heading === */
+    h1 {
+      color: #2c2c2c;
+      font-size: 2rem;
+      margin-bottom: 32px;
+      font-weight: 600;
+    }
+
+    /* === Game List === */
+    .game-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .game-list li {
+      margin-bottom: 20px;
+    }
+
+    .game-link {
+      display: inline-block;
+      background: #e2d3b3;
+      color: #39393A;
+      text-decoration: none;
+      padding: 14px 32px;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      transition: all 0.2s ease;
+    }
+
+    .game-link:hover {
+      background: #c8b89a;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* === Footer === */
+    .footer {
+      width: 100%;
+      text-align: center;
+      padding: 16px 0 12px 0;
+      background: rgba(255, 255, 255, 0.2);
+      font-size: 16px;
+      color: #39393A;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      z-index: 100;
+      backdrop-filter: blur(4px);
+    }
+
+    .footer a {
+      color: #39393A;
+      text-decoration: underline;
+    }
+
+    .footer a:hover {
+      color: #000;
+    }
+
+    /* === Responsive === */
+    @media (max-width: 480px) {
+      .container {
+        padding: 24px 18px;
+      }
+      .game-link {
+        font-size: 1rem;
+        padding: 12px 24px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Games Hub</h1>
-        <ul class="game-list">
-            <li><a class="game-link" href="calculator.py" target="_blank">Play Calculator (Python)</a></li>
-            <li><a class="game-link" href="live_calculator.html" target="_blank">Play Calculator (Live)</a></li>
-            <!-- Add more games here -->
-        </ul>
-    </div>
+  <div class="container">
+    <h1>Games Hub</h1>
+    <ul class="game-list">
+      <li><a class="game-link" href="https://shubhamdhama.space/nolink/nolink.html">Dead Link</a></li>
+      <li><a class="game-link" href="live_calculator.html">Calculator (HTML)</a></li>
+      <li><a class="game-link" href="lorewiki/README.md">Calculator (HTML)</a></li>
+      <!-- Add more games here -->
+    </ul>
+  </div>
+
+  <div class="footer">
+    <a href="index.html">Go to Homepage</a>
+  </div>
 </body>
 </html>
