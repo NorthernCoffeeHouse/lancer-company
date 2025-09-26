@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledgebase Homepage</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f5ecd7;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+            padding: 32px 24px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 32px;
+            color: #4a3f2c;
+        }
+        .tabs {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+            justify-content: center;
+        }
+        .tab {
+            background: #e2d3b3;
+            border: none;
+            border-radius: 12px 12px 0 0;
+            padding: 12px 32px;
+            font-size: 1.1rem;
+            color: #4a3f2c;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .tab.active {
+            background: #fff;
+            font-weight: bold;
+            border-bottom: 2px solid #c8b89a;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .chapter-list {
+            list-style: none;
+            padding: 0;
+        }
+        .chapter-list li {
+            margin-bottom: 16px;
+        }
+        .chapter-link {
+            text-decoration: none;
+            color: #2f3542;
+            background: #f5ecd7;
+            padding: 10px 18px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: background 0.2s;
+            display: inline-block;
+        }
+        .chapter-link:hover {
+            background: #e2d3b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Knowledgebase</h1>
+        <div class="tabs">
+            <button class="tab active" data-tab="python">Python</button>
+            <button class="tab" data-tab="sql">SQL</button>
+            <button class="tab" data-tab="sap">SAP Concepts</button>
+        </div>
+        <div class="tab-content active" id="python">
+            <h2>Python Chapters</h2>
+            <ul class="chapter-list">
+                <li><a class="chapter-link" href="python_chapter1.ipynb">Python Basics</a></li>
+                <li><a class="chapter-link" href="python_chapter2.ipynb">Data Structures</a></li>
+                <li><a class="chapter-link" href="python_chapter3.ipynb">Functions & Modules</a></li>
+            </ul>
+        </div>
+        <div class="tab-content" id="sql">
+            <h2>SQL Chapters</h2>
+            <ul class="chapter-list">
+                <li><a class="chapter-link" href="sql_chapter1.html">SQL Basics</a></li>
+                <li><a class="chapter-link" href="sql_chapter2.html">Joins & Queries</a></li>
+            </ul>
+        </div>
+        <div class="tab-content" id="sap">
+            <h2>SAP Concepts</h2>
+            <ul class="chapter-list">
+                <li><a class="chapter-link" href="sap_chapter1.html">SAP Overview</a></li>
+                <li><a class="chapter-link" href="sap_chapter2.html">SAP Modules</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                contents.forEach(c => c.classList.remove('active'));
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
