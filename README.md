@@ -1,5 +1,3 @@
-Got it 👍 Here’s the **complete single-file `tdd.md`** with a **color palette table** added.
-
 ````markdown
 # Technical Design Document (TDD)
 
