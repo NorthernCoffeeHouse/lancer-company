@@ -1,0 +1,6 @@
+# Ignore a folder named "node_modules" anywhere in the project
+node_modules/
+
+# Ignore a folder named "build" only at the root level
+/build/
+/hidden/
